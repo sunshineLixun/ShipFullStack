@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { ThemeSwitch } from "./theme-switch";
 
 export function SiteHeader() {
   return (
@@ -12,17 +12,10 @@ export function SiteHeader() {
           orientation="vertical"
         />
         <h1 className="font-medium text-base">Documents</h1>
+
         <div className="ml-auto flex items-center gap-2">
-          <Button asChild className="hidden sm:flex" size="sm" variant="ghost">
-            <a
-              className="dark:text-foreground"
-              href="https://github.com/shadcn-ui/ui/tree/main/apps/v4/app/(examples)/dashboard"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              GitHub
-            </a>
-          </Button>
+          {/* theme switch */}
+          <ThemeSwitch />
         </div>
       </div>
     </header>
